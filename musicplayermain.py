@@ -56,12 +56,13 @@ while True:
 			return player
 			
 		def keep_playing(loc, list, player, dead):
-			currently_playing = random.choice(list)
+			
 			
 			while True:
 				#print("Check")
 				time.sleep(2)
 				if player.get_state() == vlc.State.Ended:
+					currently_playing = random.choice(list)
 					print("song changed!")
 					player = play_music(loc, currently_playing, player)
 					
